@@ -24,8 +24,7 @@
                 <p><i>accurate</i> trades</p>
             </span>
         </div>
-        <!-- <a class="tpbtn" href="#tp2"><span id="tpbtn">Get Started</span></a> -->
-        <a id="get_started" onclick="disable()" href="#tutorial">
+        <a id="get_started" href="#tutorial">
             <span id="started">
                 Get Started
             </span>
@@ -38,17 +37,17 @@
         <nav class="nav">
         <a href="#tp1">
             <div class="home">
-                <img src="/images/home.png" width="70px" alt="Hoem">
+                <img src="./images/home.png" width="70px" alt="Hoem">
             </div>
         </a>
         <a href="#">
             <div class="view">
-                <img src="/images/Info.png" width="70px" alt="Hoem">
+                <img src="./images/Info.png" width="70px" alt="Hoem">
             </div>
         </a>
         <a href="#">
             <div class="info">
-                <img src="/images/graph.png" width="70px" alt="Hoem">
+                <img src="./images/graph.png" width="70px" alt="Hoem">
             </div>
         </a>
         </nav>
@@ -65,7 +64,7 @@
                     <i id="pt">d</i>
                     <i id="pt">e</i>
                 </div>
-                <a class="tpbtn" href="#tp2"><span id="tpbtn">Get Started</span></a>
+                <a class="tpbtn" onclick="disable_main()" href="#tp2"><span id="tpbtn">Get Started</span></a>
             </div>
             
             <div class="tp2" id="tp2">
@@ -136,7 +135,7 @@
                     <p>Accurate insights, thst help</p>
                     <p>you win. WIN BIG!</p>
                 </span>
-                <a class="tpbtn" onclick="enable()"><span id="tpbtn">Next</span></a>
+                <a class="tpbtn" href="./login.html" onclick="enable_tutorial()"><span id="tpbtn">LogIn / Sign Up</span></a>
             </div>
 
 
@@ -148,13 +147,12 @@
     let main = document.querySelector('.main');
     let tutorial = document.querySelector('.tutorial');
 
-    tutorial.setAttribute('class', 'disable');
 
-    function disable() {
+    function disable_main() {
         main.setAttribute("class", "disable");
         tutorial.setAttribute('class', 'tutorial')
     }
-    function enable() {
+    function enable_tutorial() {
         tutorial.setAttribute('class','disable');
         main.setAttribute('class', 'main')
     }
